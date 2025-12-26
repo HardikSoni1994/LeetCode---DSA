@@ -24,8 +24,6 @@ Constraints:
 Only one valid answer exists.*/
 
 #include <iostream>
-#include <vector>
-
 using namespace std;
 
 int main() {
@@ -34,7 +32,7 @@ int main() {
     cout <<"Enter number of elements in the array: ";
     cin >> n;
 
-    vector<int> nums(n);
+    int nums[100];
     cout << "Enter target value : ";
     cin >> target;
 
@@ -44,11 +42,11 @@ int main() {
         cin >> nums[i];
     }
 
-    // Find two indices such that their values add up to target
+    // Find two index such that their values add up to target
     for (int i = 0; i < n; i++) {
         for (int j = i+1; j < n; j++) {
-            if (i != j && nums[i] + nums[j] == target) {
-                cout << "Indices of the two numbers that add up to " << target << " are: [" << i << ", " << j << "]" << endl;
+            if (nums[j] == target - nums[i]) {
+                cout << "Index of two numbers that add up to " << target << " are: [" << i << ", " << j << "]" << endl;
                 return 0;
             }
         }
