@@ -18,7 +18,7 @@ int main()
 
     int j = 1;
 
-    //logic to remove Dublicate element
+    //logic to remove Duplicate element
     for (int i = 1; i < n; i++)
     {
         if (arr[i] != arr[i - 1])
